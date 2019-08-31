@@ -195,3 +195,11 @@ footer {
   line-height: 1.4rem;
   margin-top: 25px;
   margin-top: 1.4rem; }
+
+@media screen {
+  /* line 13, build/scss/elements/_footer.scss */
+  footer {
+    padding-left: 25px;
+    padding-left: 1.4rem;
+    padding-right: 25px;
+    padding-right: 1.4rem; } }
