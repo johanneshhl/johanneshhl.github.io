@@ -1,0 +1,27 @@
+
+    nav {
+
+        @extend %component;
+
+        width: auto;
+        z-index: 3;
+        position: absolute;
+        
+        @include output-rhythm(right, rhythm(-0.33, $font-scale-min-1));
+        @include output-rhythm(top, rhythm(-0.5, $font-scale-min-1));
+        
+
+
+        @include output-rhythm(padding-left, rhythm(0.35, $font-scale-min-1));
+        @include output-rhythm(padding-right, rhythm(0.35, $font-scale-min-1));
+        @include adjust-font-size-to($font-scale-min-2, 1);
+
+        
+        text-align-last: justify;
+        
+        a {
+            @include output-rhythm(padding-left, rhythm(0.5, $font-scale-min-1));
+            @include output-rhythm(padding-right, rhythm(0.5, $font-scale-min-1));
+        }
+
+    }

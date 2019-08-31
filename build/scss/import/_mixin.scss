@@ -1,0 +1,8 @@
+
+
+// view_port_gen
+@mixin view_port_mixin($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}

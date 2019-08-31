@@ -1,0 +1,9 @@
+
+    footer {
+        @extend %shared;
+        display: block;
+        @include adjust-font-size-to($font-scale-min-2, 1);
+        @include margin-leader(1);
+
+    }
+

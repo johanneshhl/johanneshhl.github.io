@@ -1,0 +1,57 @@
+
+    h1 {
+        
+        @extend %shared;
+
+        @include adjust-font-size-to($font-scale-plus-3, 1.25);
+        @include margin-leader(0.25, $font-scale-plus-3);
+        @include padding-trailer(0.5, $font-scale-plus-3);
+
+        letter-spacing: -($font-scale-plus-2) * 0.025;
+        font-weight: 900;
+        text-transform: uppercase;
+        
+    }
+
+    h2 {
+
+        @extend %shared;
+        @include margin-leader(1.5,$font-scale-plus-1);
+        @include padding-trailer(0.5,$font-scale-plus-1);
+        
+        @include adjust-font-size-to($font-scale-plus-1, 1);
+        
+        letter-spacing: -($font-scale-plus-1) * 0.025;
+        font-weight: 900;
+
+
+        & + dd {
+            @include margin-leader(1);
+        }
+
+    }
+
+
+    p {
+        @extend %shared;
+        @include adjust-font-size-to($font-scale-base);
+        & + p {
+            @include margin-leader(1);
+        }
+    }
+
+
+
+    a {
+        @extend %shared;
+
+        font-weight: 700;
+        text-decoration: none;
+
+        &:active {
+            color: #3C3C3C;
+        }
+        &:hover span {
+            border-bottom: #3C3C3C solid 1px;
+        }
+    }

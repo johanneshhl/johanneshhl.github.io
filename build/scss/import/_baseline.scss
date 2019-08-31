@@ -1,0 +1,67 @@
+
+
+// mixin for creating correct font sizes
+// and if the size is less than base line height
+// it adds an uneven class to element to for print
+// lines to round up.
+//
+// if font size is less than base line height
+// it make it fill one line.
+
+
+
+@mixin baseline($fontSize, $lines:auto, $fromSize: $base-font-size) {
+    $linesForFontSize: auto !default;
+
+    @if ($lines == auto) {
+        $linesForFontSize: lines-for-font-size($fontSize);
+    } @else {
+        $linesForFontSize: round($lines);
+    }
+
+    @if( $fontSize < $base-font-size){        
+        @include adjust-font-size-to($fontSize, 1, $fromSize);
+    } @else {
+        @include adjust-font-size-to($fontSize, round($linesForFontSize), $fromSize);
+    }
+    
+}
+
+@mixin baseline-uneven($fontSize, $fromSize: $base-font-size) {
+
+    @if( $fontSize <= $base-font-size){
+        @include adjust-font-size-to($fontSize, 1, $fromSize);
+    } @else {
+        @include adjust-font-size-to($fontSize, lines-for-font-size($fontSize, true), $fromSize);
+    }
+        
+}
+
+@mixin baseline-heading($fontSize, $lines:auto, $fromSize: $base-font-size, $headingType:h9, $properties_uses_padding-top: false, $properties_uneven_padding-top: 0) {
+    
+    @if( $fontSize <= $base-font-size) {
+        @include adjust-font-size-to($fontSize, 1, $fromSize);
+    } @else {
+        @include adjust-font-size-to($fontSize, lines-for-font-size-quarter($fontSize, true), $fromSize);
+    }
+
+    $unevenAmount: 0.25 !default;
+
+    $linesForFontSize: lines-for-font-size-quarter($fontSize, true);
+
+    @if (round($linesForFontSize) != $linesForFontSize and $GLOBAL-USE-HALF-LINE) {
+        @each $ua in [($unevenAmount), ($unevenAmount * 2), ($unevenAmount * 3)] {
+            &.uneven-#{$ua * 100} {
+                @if ($properties_uses_padding-top) {
+
+                    $paddingLines: (rhythm($ua, $fontSize) + $properties_uneven_padding-top);
+                    @include output-rhythm(padding-top, $paddingLines);
+
+                } @else {
+                    @include padding-trailer($ua,$fontSize);
+                };
+            }
+        }
+    }
+    
+}

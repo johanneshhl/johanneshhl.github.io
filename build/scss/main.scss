@@ -1,0 +1,80 @@
+@import 'import/reset';
+@import 'import/compass_rhythm';
+@import 'import/mixin';
+@import 'import/variables';
+
+@include establish-baseline;
+
+%shared {
+    font-family: $base-font-family;
+    color: $base-font-color;
+}
+
+@media print {
+
+    size: a4;
+    margin: 5cm;
+
+    
+
+}
+
+
+@media screen {
+
+    %component {
+        border-radius: $base-font-size / 4;
+        background-color: $base-background-color;
+        border: solid 1px #d1d1d1;
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+    }
+
+    html,body {
+        background-color: $html-background-color;
+    }
+    
+    
+    
+    *[data-display_only_in_print] {
+        display: none;
+    }
+    
+    .main {
+    
+        position: relative;
+        width: 600px;
+        
+        @include margin-leader(2);
+        
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    
+
+    .background_base {
+
+        @extend %component;
+    
+        position: relative;
+        height: auto;
+        width: auto;
+    
+        @include output-rhythm(padding-left, rhythm(1, $font-scale-base));
+        @include output-rhythm(padding-right, rhythm(1, $font-scale-base));
+
+        @include padding-leader(1);
+        @include padding-trailer(1);
+    
+    }
+    
+}
+
+
+
+
+@import 'elements/text';
+@import 'elements/lists';
+@import 'elements/nav';
+@import 'elements/hr';
+@import 'elements/footer';

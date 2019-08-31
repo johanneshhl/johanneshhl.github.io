@@ -1,0 +1,22 @@
+
+
+    dl {
+        @extend %shared;
+        @include adjust-font-size-to($font-scale-base);
+    }
+
+    dt {
+        
+    }
+    
+    dd {
+
+        @include output-rhythm(margin-left, rhythm(0.5, $font-scale-base));
+
+        & + dt {
+            @include margin-leader(1);
+        }
+    }
+
+
+    
