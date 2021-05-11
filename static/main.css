@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,900&display=swap");
-/* line 2, build/scss/import/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -7,48 +6,38 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
   vertical-align: baseline;
   box-sizing: border-box; }
 
-/* line 11, build/scss/import/_reset.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
-/* line 13, build/scss/import/_reset.scss */
 ol, ul {
   list-style: none; }
 
-/* line 15, build/scss/import/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 17, build/scss/import/_reset.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 19, build/scss/import/_reset.scss */
 q, blockquote {
   quotes: none; }
 
-/* line 20, build/scss/import/_reset.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none; }
 
-/* line 22, build/scss/import/_reset.scss */
 a img {
   border: none; }
 
-/* line 24, build/scss/import/_reset.scss */
 address, article, aside, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, li, main, menu, summary, nav, noscript, ol, output, p, pre, section, table, tfoot, ul, video {
   display: block; }
 
-/* line 140, build/scss/import/compass_rhythm/_vertical_rhythm.scss */
 html {
   font-size: 112.5%;
   line-height: 1.4em; }
 
-/* line 8, build/scss/main.scss */
 h1, h2, p, a, dl, footer {
   font-family: "Source Sans Pro", sans-serif;
   color: #3C3C3C; }
@@ -56,21 +45,19 @@ h1, h2, p, a, dl, footer {
 @media print {
   size: a4;
   margin: 5cm; }
-
 @media screen {
-  /* line 25, build/scss/main.scss */
   .background_base, nav {
     border-radius: 4.5px;
     background-color: #FFFFFF;
     border: solid 1px #d1d1d1;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15); }
-  /* line 32, build/scss/main.scss */
+
   html, body {
     background-color: #F3F3F3; }
-  /* line 38, build/scss/main.scss */
+
   *[data-display_only_in_print] {
     display: none; }
-  /* line 42, build/scss/main.scss */
+
   .main {
     position: relative;
     width: 600px;
@@ -78,7 +65,7 @@ h1, h2, p, a, dl, footer {
     margin-top: 2.8rem;
     margin-left: auto;
     margin-right: auto; }
-  /* line 55, build/scss/main.scss */
+
   .background_base {
     position: relative;
     height: auto;
@@ -91,77 +78,64 @@ h1, h2, p, a, dl, footer {
     padding-top: 1.4rem;
     padding-bottom: 25px;
     padding-bottom: 1.4rem; } }
-
-/* line 2, build/scss/elements/_text.scss */
 h1 {
   font-size: 35px;
-  font-size: 1.95313rem;
+  font-size: 1.953125rem;
   line-height: 32px;
   line-height: 1.75rem;
   margin-top: 6px;
   margin-top: 0.35rem;
   padding-bottom: 13px;
   padding-bottom: 0.7rem;
-  letter-spacing: -0.70313px;
+  letter-spacing: -0.703125px;
   font-weight: 900;
   text-transform: uppercase; }
 
-/* line 16, build/scss/elements/_text.scss */
 h2 {
   margin-top: 38px;
   margin-top: 2.1rem;
-  padding-bottom: 13px;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
   font-size: 23px;
   font-size: 1.25rem;
   line-height: 25px;
   line-height: 1.4rem;
   letter-spacing: -0.5625px;
   font-weight: 900; }
-  /* line 28, build/scss/elements/_text.scss */
   h2 + dd {
     margin-top: 25px;
     margin-top: 1.4rem; }
 
-/* line 35, build/scss/elements/_text.scss */
 p {
   font-size: 18px;
   font-size: 1rem;
   line-height: 25px;
   line-height: 1.4rem; }
-  /* line 38, build/scss/elements/_text.scss */
   p + p {
     margin-top: 25px;
     margin-top: 1.4rem; }
 
-/* line 45, build/scss/elements/_text.scss */
 a {
   font-weight: 700;
   text-decoration: none; }
-  /* line 51, build/scss/elements/_text.scss */
   a:active {
     color: #3C3C3C; }
-  /* line 54, build/scss/elements/_text.scss */
   a:hover span {
     border-bottom: #3C3C3C solid 1px; }
 
-/* line 3, build/scss/elements/_lists.scss */
 dl {
   font-size: 18px;
   font-size: 1rem;
   line-height: 25px;
   line-height: 1.4rem; }
 
-/* line 12, build/scss/elements/_lists.scss */
 dd {
   margin-left: 13px;
   margin-left: 0.7rem; }
-  /* line 16, build/scss/elements/_lists.scss */
   dd + dt {
     margin-top: 25px;
     margin-top: 1.4rem; }
 
-/* line 2, build/scss/elements/_nav.scss */
 nav {
   width: auto;
   z-index: 3;
@@ -179,14 +153,12 @@ nav {
   line-height: 25px;
   line-height: 1.4rem;
   text-align-last: justify; }
-  /* line 22, build/scss/elements/_nav.scss */
   nav a {
     padding-left: 13px;
     padding-left: 0.7rem;
     padding-right: 13px;
     padding-right: 0.7rem; }
 
-/* line 2, build/scss/elements/_footer.scss */
 footer {
   display: block;
   font-size: 12px;
@@ -197,7 +169,6 @@ footer {
   margin-top: 1.4rem; }
 
 @media screen {
-  /* line 13, build/scss/elements/_footer.scss */
   footer {
     padding-left: 25px;
     padding-left: 1.4rem;
