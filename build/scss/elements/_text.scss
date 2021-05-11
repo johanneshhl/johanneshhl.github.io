@@ -17,7 +17,7 @@
 
         @extend %shared;
         @include margin-leader(1.5,$font-scale-plus-1);
-        @include padding-trailer(0.5,$font-scale-plus-1);
+        @include padding-trailer(0,$font-scale-plus-1);
         
         @include adjust-font-size-to($font-scale-plus-1, 1);
         
